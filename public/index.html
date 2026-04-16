@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>LAN Messenger</title>
+
+    <!-- SEO / description -->
+    <meta
+      name="description"
+      content="A simple, FOSS, and UNencrypted messager, which can be easily self hosted"
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#1e1e2e" />
+
+    <!-- DNS prefetch / preconnect for performance (optional) -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./stylesheet/main.css" />
+
+    <!-- Modern best-practice: prefer module scripts + defer -->
+    <script type="module" src="./script/main.js"></script>
+
+    <!-- Optional: canonical URL -->
+    <!-- <link rel="canonical" href="https://example.com/" /> -->
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar__left">
+        <nav class="topbar__nav" aria-label="Navigation bar">
+          <a href="/home">Home</a>
+          <a href="/chat">Chat</a>
+          <a href="/preferences">Preferences</a>
+        </nav>
+      </div>
+      <div class="topbar__right">
+        <input
+          class="topbar__username"
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Username"
+        />
+      </div>
+    </header>
+  </body>
+</html>
