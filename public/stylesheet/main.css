@@ -1,16 +1,18 @@
-/* Fonts */
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
-
-/* Normalize */
+/* Reset */
 @import "normalize.css";
-
-html,
-input {
-  font-family: "JetBrains Mono", monospace;
-}
 
 /* Blocks */
 @import "./blocks/topbar.css";
 @import "./blocks/home.css";
 @import "./blocks/chat.css";
 @import "./blocks/preferences.css";
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+/* Default */
+html,
+input,
+button {
+  font-family: "JetBrains Mono", monospace;
+}

@@ -25,30 +25,82 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./stylesheet/main.css" />
 
-    <!-- Modern best-practice: prefer module scripts -->
+    <!-- Scripts -->
     <script type="module" src="./script/main.js"></script>
 
     <!-- Optional: canonical URL -->
     <!-- <link rel="canonical" href="https://example.com/" /> -->
   </head>
+
   <body>
+    <!-- Header / Navigation -->
     <header class="topbar">
       <div class="topbar__left">
         <nav class="topbar__nav" aria-label="Navigation bar">
-          <a class="topbar__link" href="/home">Home</a>
-          <a class="topbar__link" href="/chat">Chat</a>
-          <a class="topbar__link" href="/preferences">Preferences</a>
+          <a class="topbar__link" href="#/home">Home</a>
+          <a class="topbar__link" href="#/chat">Chat</a>
+          <a class="topbar__link" href="#/preferences">Preferences</a>
         </nav>
       </div>
+
+      <div class="topbar__center">
+        <output class="topbar__indicator">No activity</output>
+      </div>
+
       <div class="topbar__right">
         <input
           class="topbar__username"
           type="text"
-          name="username"
-          id="username"
+          name="topbar-username"
+          id="topbar-username"
           placeholder="Username"
         />
       </div>
     </header>
+
+    <!-- Main content (router renders here) -->
+    <main id="app"></main>
+
+    <!-- Page Templates -->
+    <template id="home">
+      <section class="home">
+        <div class="home__content">
+          <div class="home__header">
+            <h1 class="home__title">LAN Messenger</h1>
+            <output class="home__peer-counter">0 Peers</output>
+            <output class="home__notification-counter">0 Notifications</output>
+          </div>
+
+          <p class="home__description">
+            A basic messenger running fully on your Local Area Network.
+            Unencrypted, anonymous, just set your username (or don't!), and you
+            can start chatting!
+          </p>
+
+          <div class="home__form">
+            <input
+              class="home__username"
+              type="text"
+              name="home-username"
+              id="home-username"
+              placeholder="Enter your username"
+            />
+            <button type="button" class="home__button">Start Chatting!</button>
+          </div>
+        </div>
+      </section>
+    </template>
+
+    <template id="chat">
+      <section class="chat">
+        <!-- Placeholder -->
+      </section>
+    </template>
+
+    <template id="preferences">
+      <section class="preferences">
+        <!-- Placeholder -->
+      </section>
+    </template>
   </body>
 </html>
