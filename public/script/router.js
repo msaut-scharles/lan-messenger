@@ -1,7 +1,12 @@
+const homePageRegistry = {
+  home: () => import("./pages/home.js").then((m) => m.initHome()),
+};
+
 export function initRouter() {
   window.addEventListener("hashchange", handleRoute);
   handleRoute(); // handle initial page load
 }
+
 function handleRoute() {
   const route = window.location.hash.slice(1) || "/home";
   const templateId = route.replace("/", ""); // '/home' -> 'home'; '/chat' -> 'chat'
@@ -11,5 +16,8 @@ function handleRoute() {
   if (template) {
     app.innerHTML = "";
     app.appendChild(template.content.cloneNode(true));
+
+    const init = homePageRegistry[templateId];
+    if (init) init();
   }
 }
